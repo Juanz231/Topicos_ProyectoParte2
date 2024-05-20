@@ -1,0 +1,138 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{% load humanize %}
+{% block title %} {{ title }} {% endblock %}
+{% block header_title %} {{ subtitle }} {% endblock %}
+
+{% block content %}
+<style>
+  .card {
+    background-color: #f8f9fa; /* Fondo blanco pastel */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .img-card {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .card-body {
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el cuerpo de la tarjeta */
+    border-radius: 10px;
+  }
+
+  .btn {
+    background-color: #faadad; /* Tonos rojos claros */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #fa4848; /* Tonos rojos claros */
+  }
+
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #310808; /* Tonos rojos claros */
+    margin-top: 10px;
+  }
+
+  .floating-btn {
+    position: fixed;
+    bottom: 100px; /* Ajustar para estar más arriba del footer */
+    right: 20px;
+    background-color: #faadad;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+
+  .floating-btn:hover {
+    background-color: #fa4848;
+  }
+</style>
+
+<div class="container my-5">
+  <div class="row">
+    {% for ropa in ropas %}
+    <div class="col-md-4 col-lg-3 mb-4">
+      <div class="card h-100">
+        <img src="{{ ropa.image_url }}" class="card-img-top img-card" alt="{{ ropa.Titulo }}">
+        <div class="card-body text-center">
+          <a href="{% url 'show' id=ropa.id %}" class="btn">{{ ropa.Titulo }}</a>
+          <p class="price">{{ ropa.precio|intcomma }} $</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if user.is_authenticated %}
+  <a href="{% url 'ropa_create' %}" class="floating-btn">{% trans "Subir prenda" %}</a>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block footer %}
+<style>
+  .footer {
+    background-color: #ffd7e0; /* Color rojo pastel más claro */
+    color: #151515;
+    padding: 20px 0;
+    border-top-left-radius: 10px; /* Bordes redondeados */
+    border-top-right-radius: 10px;
+  }
+
+  .text-grey {
+    color: #151515;
+  }
+
+  .post-text-box {
+    margin-top: 10px;
+  }
+
+  .post-text-box a {
+    color: #151515;
+  }
+
+  .post-text-box a:hover {
+    color: #c73659;
+  }
+</style>
+<div class="footer text-center">
+  <div class="container">
+    <small>
+      {% trans 'Diseñado por:' %} - 
+      <a class="text-reset fw-bold text-decoration-none" target="_blank">Juan Diego Lopez Guisao</a>
+      <div class="post-text-box">
+        <a class="text-reset fw-bold text-decoration-none" target="_blank">Daniel Alejandro Parra</a>
+      </div>
+      <div class="post-text-box">
+        <a class="text-reset fw-bold text-decoration-none" target="_blank">Melisa Rua Henao</a>
+      </div>
+    </small>
+  </div>
+</div>
+{% endblock %}

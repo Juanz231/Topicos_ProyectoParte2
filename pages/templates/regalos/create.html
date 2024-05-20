@@ -1,0 +1,82 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+<style>
+  .form-container {
+    background-color: #f8f9fa; /* Fondo blanco pastel */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background-color: #faadad;
+    border-color: #faadad;
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: #fa4848;
+    border-color: #fa4848;
+  }
+
+  .alert-danger {
+    border-radius: 5px;
+  }
+</style>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="form-container">
+        <div class="form-header">{% trans "Crear Regalo" %}</div>
+        <div class="card-body">
+          {% if form.errors %}
+          <ul id="errors" class="alert alert-danger list-unstyled">
+            {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+            {% endfor %}
+          </ul>
+          {% endif %}
+          <form method="POST" action="{% url 'regalos_create' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="{% trans "Ingresa el titulo del regalo" %}" name="titulo_regalo" value="{{ form.data.titulo_regalo }}" />
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="{% trans "Ingresa el contenido del regalo" %}" name="contenido_regalo" value="{{ form.data.contenido_regalo }}" />
+            </div>
+            <div class="mb-3">
+              <input type="date" class="form-control" placeholder="{% trans "Ingresa la fecha de creacion del regalo" %}" name="fecha_creacion" value="{{ form.data.fecha_creacion }}" />
+            </div>
+            <div class="mb-3">
+              <input type="date" class="form-control" placeholder="{% trans "Ingresa la fecha de modificacion del regalo" %}" name="fecha_modificacion" value="{{ form.data.fecha_modificacion }}" />
+            </div>
+            <div class="text-center">
+              <input type="submit" class="btn btn-primary" value="{% trans "Enviar" %}" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

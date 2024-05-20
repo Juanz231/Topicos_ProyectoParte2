@@ -1,0 +1,65 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{% block title %}
+  {% trans 'TechnoStyleFashion - Registrarse' %}
+{% endblock %}
+{% block content %}
+{% comment %} {% trans 'programmed by: Juan Pavas' %} {% endcomment %}
+<section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">{% trans 'Registrarse' %}</div>
+            <div class="card-body">
+              {% if form.errors %}
+                <div class="alert alert-danger">
+                  <p>{% trans 'Por favor corrija los siguientes errores:' %}</p>
+                  <ul>
+                    {% for field, errors in form.errors.items %}
+                      {% for error in errors %}
+                        <li>{{ field|title }}: {{ error }}</li>
+                      {% endfor %}
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+              <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label for="id_username" class="form-label">{% trans 'Nombre de Usuario:' %}</label>
+                  <input type="text" name="username" class="form-control" id="id_username" />
+                </div>
+                <div class="mb-3">
+                  <label for="id_email" class="form-label">{% trans 'Correo:' %}</label>
+                  <input type="email" name="email" class="form-control" id="id_email" />
+                </div>
+                <div class="mb-3">
+                  <label for="id_password1" class="form-label">{% trans 'Contraseña:' %}</label>
+                  <input type="password" name="password1" class="form-control" id="id_password1" />
+                </div>
+                <div class="mb-3">
+                  <label for="id_password2" class="form-label">{% trans 'Confirme Contraseña:' %}</label>
+                  <input type="password" name="password2" class="form-control" id="id_password2" />
+                </div>
+                <div class="mb-3">
+                  <label for="id_tipo_usuario" class="form-label">{% trans 'Tipo de Usuario:' %}</label>
+                  <select name="tipo_usuario" class="form-select form-control" id="id_tipo_usuario">
+                    <option value="Tienda">{% trans 'Tienda' %}</option>
+                    <option value="Cliente">{% trans 'Cliente' %}</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">{% trans 'Registrarse' %}</button>
+              </form>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <p>
+              {% trans '¿Ya tienes una Cuenta?' %} <a href="{% url 'login1' %}">{% trans 'Iniciar Sesión' %}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

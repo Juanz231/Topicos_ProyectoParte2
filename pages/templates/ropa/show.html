@@ -1,0 +1,90 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{% load humanize %}
+{% block title %} {{ title }} {% endblock %}
+{% block header_title %} {{ subtitle }} {% endblock %}
+{% block content %}
+<style>
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card img {
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+    height: 100%;
+    max-height: 500px;
+  }
+
+  .card-body {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .card-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #343a40;
+  }
+
+  .card-text {
+    font-family: 'Arial', sans-serif;
+    color: #495057;
+    font-size: 1.2rem;
+  }
+
+  .price-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .delete-link {
+    margin-top: 15px;
+    color: #dc3545;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .delete-link:hover {
+    text-decoration: underline;
+  }
+
+  .text-danger {
+    color: #dc3545 !important;
+  }
+
+  .container {
+    max-width: 1000px;
+  }
+</style>
+
+<div class="container my-5">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-5">
+        <img src="{{ ropa.image_url }}" class="img-fluid rounded-start" alt="{{ ropa.Titulo }}">
+      </div>
+      <div class="col-md-7">
+        <div class="card-body">
+          <h5 class="card-title">{{ ropa.Titulo }}</h5>
+          <p class="card-text price-text {% if ropa.precio > 100000 %}text-danger{% endif %}">{{ ropa.precio|intcomma }} $</p>
+          <p class="card-text"><strong>{% trans "Marca:" %}</strong> {{ ropa.Marca }}</p>
+          <p class="card-text"><strong>{% trans "Fecha de publicación:" %}</strong> {{ ropa.Fecha_publicacion }}</p>
+          <a class="delete-link" href="{% url 'ropa_delete' id=ropa.id %}">{% trans "Borrar Prenda" %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

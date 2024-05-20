@@ -1,0 +1,65 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{% block title %} {{ title }} {% endblock %}
+{% block header_title %} {{ subtitle }}
+<hr>
+<a class="nav-link active" href="{% url 'regalos_create' %}">{% trans "Subir regalos" %}</a>
+{% endblock %}
+
+{% block content %}
+<style>
+  .card {
+    background-color: #f8f9fa; /* Fondo blanco pastel */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .img-card {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .card-body {
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el cuerpo de la tarjeta */
+    border-radius: 10px;
+  }
+
+  .btn {
+    background-color: #faadad; /* Tonos rojos claros */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #fa4848; /* Tonos rojos claros */
+  }
+</style>
+
+<div class="row">
+  {% for regalo in regalos %}
+  <div class="col-md-4 col-lg-3 mb-2">
+    <div class="card">
+      <img src="https://static.vecteezy.com/system/resources/previews/013/834/571/original/gift-boxes-with-ribbon-in-cartoon-style-blue-color-present-box-colorful-illustration-png.png" class="card-img-top img-card">
+      <div class="card-body text-center">
+        <a href="{% url 'regalo_show' id=regalo.id %}" class="btn bg-primary text-black">{{ regalo.titulo_regalo }}</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

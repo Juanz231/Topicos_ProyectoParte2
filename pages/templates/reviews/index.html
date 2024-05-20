@@ -1,0 +1,22 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{% block title %} {{title}} {% endblock %}
+{% block header_title %} {{subtitle}}
+<hr>
+<a class="nav-link active" href="{%url 'forreview' %}">{% trans 'Crear reviews' %}</a> {% endblock %}
+{% comment %} programado por: Andres Rua, Jose Valencia y Juan Pavas {% endcomment %}
+{% block content %}
+<div class="row">
+  {% for review in reviews %}
+  <div class="col-md-4 col-lg-3 mb-2">
+    <div class="card">
+      <img src="https://play-lh.googleusercontent.com/imEAd3PykpVSA6bRklnje-aDXeljJKHOJFICdhKJilJlJlWabxqWWtM04hE9Nnh3Bg" class="card-img-top img-card">
+      <div class="card-body text-center">
+        <a href="{% url 'reviews' id=review.id %}"
+          class="btn bg-primary text-black">{{review.Fecha_Review}}</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

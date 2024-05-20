@@ -1,0 +1,42 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{% block title %}{% trans 'TechnoStyleFashion - Iniciar Sesión' %}{% endblock %}
+{% block content %}
+{% comment %} programmed by: Juan Pavas {% endcomment %}
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">{% trans 'Iniciar Sesión' %}</div>
+                    <div class="card-body">
+                        <h4 class="card-title">{% trans 'Ingresa tus Datos' %}</h4><hr>
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-danger">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        <form action="" method="post">
+                            {% comment %} Revisar traducción de formulario predeterminado {% endcomment %}
+                            {% csrf_token %}
+                            {% for campo in form %}
+                            <div class="mb-3">
+                                <label for="" class="form-label">{{ campo.label }}</label>
+                                <input type="{{ campo.field.widget.input_type }}"
+                                  class="form-control" 
+                                  name="{{ campo.name }}" id="" aria-describedby="helpId" placeholder="{% trans 'Ingrese' %} {{ campo.label }}">
+                              </div>
+                              <div class="col-12 help-text">{{ campo.errors }}</div>
+            
+                            {% endfor %}
+                            <input class="btn btn-primary" type="submit" value="{% trans 'Ingresar' %}">
+                                <hr>
+                                <p style="margin-bottom: 4px;">{% trans '¿No te has registrado?' %} <a href="{% url 'signup' %}">{% trans 'Registrarse' %}</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

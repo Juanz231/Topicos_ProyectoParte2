@@ -1,0 +1,430 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-20 02:17-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\pages\templates\about.html:5
+msgid "TechnoStyleFashion - Acerca De"
+msgstr "TechnoStyleFashion - About"
+
+#: .\pages\templates\about.html:16
+msgid "Sabemos que te gustará todo lo que verás con nosotros."
+msgstr "We know you will like everything you see with us."
+
+#: .\pages\templates\about.html:20
+msgid "About Image"
+msgstr "About Image"
+
+#: .\pages\templates\cart\index.html:12
+msgid "Prendas disponibles"
+msgstr "Available garments"
+
+#: .\pages\templates\cart\index.html:23
+msgid "Agregar al carrito"
+msgstr "Add to cart"
+
+#: .\pages\templates\cart\index.html:37
+msgid "Ropa en el carrito"
+msgstr "Clothes in the cart"
+
+#: .\pages\templates\cart\index.html:54
+msgid "Eliminar todos los productos del carrito"
+msgstr "Remove all products from the cart"
+
+#: .\pages\templates\cart\index.html:58
+msgid "Finalizar compra"
+msgstr "Checkout"
+
+#: .\pages\templates\home.html:5 .\pages\templates\home.html:12
+#: .\pages\templates\pages\base.html:12 .\pages\templates\pages\base.html:154
+msgid "TechnoStyleFashion"
+msgstr "TechnoStyleFashion"
+
+#: .\pages\templates\pages\base.html:119
+msgid "Regresar al inicio"
+msgstr "Return to home"
+
+#: .\pages\templates\pages\base.html:126
+msgid "Prendas"
+msgstr "Garments"
+
+#: .\pages\templates\pages\base.html:127 .\pages\views.py:136
+msgid "Regalos"
+msgstr "Gifts"
+
+#: .\pages\templates\pages\base.html:128
+msgid "Carrito"
+msgstr "Cart"
+
+#: .\pages\templates\pages\base.html:129
+msgid "API/Productos"
+msgstr "API/Products"
+
+#: .\pages\templates\pages\base.html:131
+msgid "Acerca de nosotros"
+msgstr "About us"
+
+#: .\pages\templates\pages\base.html:134
+msgid "¿Cómo está tu tienda?"
+msgstr "How is your store?"
+
+#: .\pages\templates\pages\base.html:139
+msgid "Cerrar Sesión"
+msgstr "Log Out"
+
+#: .\pages\templates\pages\base.html:144
+#: .\pages\templates\registration\SignUp.html:59
+#: .\pages\templates\registration\login.html:12
+msgid "Iniciar Sesión"
+msgstr "Log In"
+
+#: .\pages\templates\pages\base.html:145
+#: .\pages\templates\registration\SignUp.html:14
+#: .\pages\templates\registration\SignUp.html:53
+#: .\pages\templates\registration\login.html:36
+msgid "Registrarse"
+msgstr "Sign Up"
+
+#: .\pages\templates\pages\base.html:171 .\pages\templates\ropa\index.html:127
+msgid "Diseñado por:"
+msgstr "Designed by:"
+
+#: .\pages\templates\regalos\create.html:11
+#, fuzzy
+#| msgid "Crear Ropa"
+msgid "Crear Regalo"
+msgstr "Create Gift"
+
+#: .\pages\templates\regalos\create.html:24
+#, fuzzy
+#| msgid "Ingresa el titulo de la nota"
+msgid "Ingresa el titulo del regalo"
+msgstr "Enter the title of the gift"
+
+#: .\pages\templates\regalos\create.html:25
+#, fuzzy
+#| msgid "Ingresa el contenido de la review"
+msgid "Ingresa el contenido del regalo"
+msgstr "Enter the gift content"
+
+
+#: .\pages\templates\regalos\create.html:26
+#, fuzzy
+#| msgid "Ingresa la fecha de creacion de la nota"
+msgid "Ingresa la fecha de creacion del regalo"
+msgstr "Enter the creation date of the note"
+
+#: .\pages\templates\regalos\create.html:27
+#, fuzzy
+#| msgid "Ingresa la fecha de modificacion de la nota"
+msgid "Ingresa la fecha de modificacion del regalo"
+msgstr "Enter the modification date of the note"
+
+#: .\pages\templates\regalos\create.html:28
+#: .\pages\templates\reviews\create.html:36
+#: .\pages\templates\ropa\create.html:77
+msgid "Enviar"
+msgstr "Submit"
+
+#: .\pages\templates\regalos\index.html:6
+#, fuzzy
+#| msgid "Subir prenda"
+msgid "Subir regalos"
+msgstr "Upload garment"
+
+#: .\pages\templates\regalos\show.html:20
+msgid "Eliminar regalo"
+msgstr ""
+
+#: .\pages\templates\registration\SignUp.html:4
+msgid "TechnoStyleFashion - Registrarse"
+msgstr "TechnoStyleFashion - Sign Up"
+
+#: .\pages\templates\registration\SignUp.html:18
+msgid "Por favor corrija los siguientes errores:"
+msgstr "Please correct the following errors:"
+
+#: .\pages\templates\registration\SignUp.html:31
+msgid "Nombre de Usuario:"
+msgstr "Username:"
+
+#: .\pages\templates\registration\SignUp.html:35
+msgid "Correo:"
+msgstr "Email:"
+
+#: .\pages\templates\registration\SignUp.html:39
+msgid "Contraseña:"
+msgstr "Password:"
+
+#: .\pages\templates\registration\SignUp.html:43
+msgid "Confirme Contraseña:"
+msgstr "Confirm Password:"
+
+#: .\pages\templates\registration\SignUp.html:47
+msgid "Tipo de Usuario:"
+msgstr "User Type:"
+
+#: .\pages\templates\registration\SignUp.html:49
+msgid "Tienda"
+msgstr "Store"
+
+#: .\pages\templates\registration\SignUp.html:50
+msgid "Cliente"
+msgstr "Customer"
+
+#: .\pages\templates\registration\SignUp.html:59
+msgid "¿Ya tienes una Cuenta?"
+msgstr "Already have an account?"
+
+#: .\pages\templates\registration\login.html:3
+msgid "TechnoStyleFashion - Iniciar Sesión"
+msgstr "TechnoStyleFashion - Log In"
+
+#: .\pages\templates\registration\login.html:14
+msgid "Ingresa tus Datos"
+msgstr "Enter your details"
+
+#: .\pages\templates\registration\login.html:29
+msgid "Ingrese"
+msgstr "Enter"
+
+#: .\pages\templates\registration\login.html:34
+msgid "Ingresar"
+msgstr "Log In"
+
+#: .\pages\templates\registration\login.html:36
+msgid "¿No te has registrado?"
+msgstr "Not registered?"
+
+#: .\pages\templates\reviews\create.html:11 .\pages\views.py:253
+#: .\pages\views.py:265
+msgid "Crear Review"
+msgstr "Create Review"
+
+#: .\pages\templates\reviews\create.html:25
+msgid "Título de la Review:"
+msgstr "Review Title:"
+
+#: .\pages\templates\reviews\create.html:26
+msgid "Ingresa el título de la review"
+msgstr "Enter the review title"
+
+#: .\pages\templates\reviews\create.html:29
+msgid "Contenido de la Review:"
+msgstr "Review Content:"
+
+
+#: .\pages\templates\reviews\create.html:30
+msgid "Ingresa el contenido de la review"
+msgstr "Enter the review content"
+
+#: .\pages\templates\reviews\create.html:33
+msgid "Fecha de Creación de la Review:"
+msgstr "Review Creation Date:"
+
+#: .\pages\templates\reviews\index.html:6
+msgid "Crear reviews"
+msgstr "Create reviews"
+
+#: .\pages\templates\reviews\show.html:19
+msgid "Borrar review"
+msgstr "Delete review"
+
+#: .\pages\templates\ropa\create.html:48 .\pages\templates\ropa\index.html:93
+msgid "Subir prenda"
+msgstr "Upload garment"
+
+#: .\pages\templates\ropa\create.html:62
+msgid "Ingresa el titulo o nombre de la prenda"
+msgstr "Enter the title or name of the garment"
+
+#: .\pages\templates\ropa\create.html:65
+msgid "Ingresa el autor o marca de la prenda"
+msgstr "Enter the author or brand of the garment"
+
+#: .\pages\templates\ropa\create.html:68
+msgid "Ingresa la fecha de publicacion de la prenda"
+msgstr "Enter the publication date of the garment"
+
+#: .\pages\templates\ropa\create.html:71
+msgid "Ingresa el precio de la prenda"
+msgstr "Enter the price of the garment"
+
+#: .\pages\templates\ropa\create.html:74
+msgid "Ingresa la URL de la imagen."
+msgstr "Enter the image URL"
+
+#: .\pages\templates\ropa\show.html:82
+msgid "Marca:"
+msgstr "Brand:"
+
+#: .\pages\templates\ropa\show.html:83
+msgid "Fecha de publicación:"
+msgstr "Publication Date:"
+
+#: .\pages\templates\ropa\show.html:84
+msgid "Borrar Prenda"
+msgstr "Delete Garment"
+
+#: .\pages\views.py:56
+msgid ""
+"En TechnoStyleFashion nos preocupamos por no solo se ve la gente, sino "
+"también por cómo se sienten."
+msgstr ""
+"At TechnoStyleFashion, we care not only about how people look but also about "
+"how they feel."
+
+#: .\pages\views.py:57
+msgid "¿Quienes están detras de todo esto?"
+msgstr "Who is behind all this?"
+
+#: .\pages\views.py:58
+msgid ""
+"Somos un grupo de estudiantes de la Universidad EAFIT que se preocupan por "
+"la moda y la tecnología. Nos esforzamos por ofrecer productos de alta "
+"calidad a precios asequibles. ¡Gracias por visitar nuestra tienda en línea!"
+msgstr ""
+"We are a group of students from Universidad EAFIT who care about fashion and "
+"technology. We strive to offer high-quality products at affordable prices. "
+"Thank you for visiting our online store!"
+
+#: .\pages\views.py:76
+msgid "El id de la prenda debe ser mayor a 1"
+msgstr "The garment ID must be greater than 1"
+
+#: .\pages\views.py:82
+msgid "Tienda de Prendas - {}"
+msgstr "Garment Store - {}"
+
+#: .\pages\views.py:83
+msgid "Informacion de la prenda - {}"
+msgstr "Garment Information - {}"
+
+#: .\pages\views.py:96 .\pages\views.py:107
+msgid "Crear Ropa"
+msgstr "Create Garment"
+
+#: .\pages\views.py:120
+msgid "Ropa - Tienda en línea"
+msgstr "Garments - Online Store"
+
+#: .\pages\views.py:121
+msgid "Lista de prendas"
+msgstr "List of garments"
+
+#: .\pages\views.py:137
+msgid "Algunos Regalos"
+msgstr "Some Gifts"
+
+#: .\pages\views.py:149
+#, fuzzy
+#| msgid "El id de la prenda debe ser mayor a 1"
+msgid "El id del regalo debe ser mayor a 1"
+msgstr "The Gift ID must be greater than 1"
+
+#: .\pages\views.py:156
+msgid "Algunos regalos - "
+msgstr "Some Gifts"
+
+#: .\pages\views.py:157
+#, fuzzy
+#| msgid "Reviews - "
+msgid "Regalos - "
+msgstr "Gifts - "
+
+#: .\pages\views.py:170 .\pages\views.py:182
+#, fuzzy
+#| msgid "Subir prenda"
+msgid "Subir Regalo"
+msgstr "Upload Gift"
+
+#: .\pages\views.py:214
+msgid "Mis Reviews"
+msgstr "My Reviews"
+
+#: .\pages\views.py:215
+msgid "Reviews"
+msgstr "Reviews"
+
+#: .\pages\views.py:227
+msgid "El id de la review debe ser mayor a 1"
+msgstr "The review ID must be greater than 1"
+
+#: .\pages\views.py:234
+msgid "Mis reviews - "
+msgstr "My reviews - "
+
+#: .\pages\views.py:235
+msgid "Reviews - "
+msgstr "Reviews - "
+
+#: .\pages\views.py:276
+msgid "Review - Tienda en línea"
+msgstr "Review - Online Store"
+
+#: .\pages\views.py:277
+msgid "Lista de Reviews"
+msgstr "List of Reviews"
+
+#: .\pages\views.py:300
+msgid "Carrito - Tienda en línea"
+msgstr "Cart - Online Store"
+
+#: .\pages\views.py:301
+msgid "Carrito de Compras"
+msgstr "Shopping Cart"
+
+#: .\pages\views.py:495
+msgid "Esta vista solo es accesible para administradores."
+msgstr "This view is only accessible to administrators."
+
+#~ msgid "Crear Notita"
+#~ msgstr "Create Gift"
+
+#~ msgid "Ingresa el contenido de la nota"
+#~ msgstr "Enter the content of the gift"
+
+#~ msgid "Crear notas"
+#~ msgstr "Create Gifts"
+
+#~ msgid "Borrar notita"
+#~ msgstr "Delete Gift"
+
+#~ msgid "Mis notas"
+#~ msgstr "My Gifts"
+
+#~ msgid "Notas"
+#~ msgstr "Gifts"
+
+#~ msgid "El id de la nota debe ser mayor a 1"
+#~ msgstr "The Gift ID must be greater than 1"
+
+#~ msgid "Mis notas - "
+#~ msgstr "My Gifts - "
+
+#~ msgid "Notas - "
+#~ msgstr "Gifts - "
+
+#~ msgid "Crear Notas"
+#~ msgstr "Create Gits"
+
+#~ msgid "Nota - Tienda en línea"
+#~ msgstr "Gifts - Online Store"
+
+#~ msgid "Lista de notitas"
+#~ msgstr "List of gifts"

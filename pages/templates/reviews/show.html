@@ -1,0 +1,23 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{% block title %} {{title}} {% endblock %}
+{% block header_title %} {{subtitle}} {% endblock %}
+{% comment %} programado por: Andres Rua, Jose Valencia y Juan Pavas {% endcomment %}
+{% block content %}
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://play-lh.googleusercontent.com/imEAd3PykpVSA6bRklnje-aDXeljJKHOJFICdhKJilJlJlWabxqWWtM04hE9Nnh3Bg" class="img-fluid rounded-start">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">
+           {{review.Titulo_Review}}
+        </h5>
+        <p class="card-text">{{review.Titulo_Review}}</p>        
+        <a class="nav-link active" style="color: red;" href="{% url 'review_delete' id=review.id %}">{% trans 'Borrar review' %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cheque generado</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F5F5F5; /* Blanco pastel */
+            color: #151515;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #C73659;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #b32644;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #A91D3A;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Comprobante de pago generado</h1>
+        <p>{{ check_text }}</p>
+        <a href="{% url 'download_pdf' %}?pdf_filename={{ pdf_filename }}">Descargar PDF</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% trans "TechnoStyleFashion - Acerca De" %}
+{% endblock %}
+{% block header_title %} {{ subtitle }} {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <p class="lead">{{title}}</p>
+    <div class="col-lg-4 ms-auto">
+      <p class="lead">{{ description }}</p>
+    </div>
+    <div class="col-lg-4 me-auto">
+      <p class="lead">{% trans "Sabemos que te gustará todo lo que verás con nosotros." %}</p>
+    </div>
+    <div class="post-text-box text-black">
+      <img src="https://i.ibb.co/DYDqnng/Techno-Style-Fashion.png" 
+           alt="{% trans "About Image" %}" class="img-fluid" style="width: 350px; border-radius: 10%;">
+    </div>
+  </div>
+</div>
+{% endblock %}

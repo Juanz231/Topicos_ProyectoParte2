@@ -1,0 +1,43 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+{% comment %} programado por: Andres Rua, Jose Valencia y Juan Pavas {% endcomment %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">{% trans 'Crear Review' %}</div>
+          <div class="card-body">
+            {% if form.errors %}
+                <ul id="errors" class="alert alert-danger list-unstyled">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+                </ul>
+            {% endif %}
+            <form method="POST" action="{% url 'forreview' %}">
+              {% csrf_token %}
+              <div class="mb-2">
+                <label for="id_Titulo_Review">{% trans 'Título de la Review:' %}</label>
+                <input type="text" class="form-control" id="id_Titulo_Review" name="Titulo_Review" placeholder="{% trans 'Ingresa el título de la review' %}" value="{{form.data.Titulo_Review }}" />
+              </div>
+              <div class="mb-2">
+                <label for="id_Contenido_Review">{% trans 'Contenido de la Review:' %}</label>
+                <input type="text" class="form-control" id="id_Contenido_Review" name="Contenido_Review" placeholder="{% trans 'Ingresa el contenido de la review' %}" value="{{form.data.Contenido_Review }}" />
+              </div>
+              <div class="mb-2">
+                <label for="id_Fecha_Review">{% trans 'Fecha de Creación de la Review:' %}</label>
+                <input type="date" class="form-control" id="id_Fecha_Review" name="Fecha_Review" value="{{form.data.Fecha_Review }}" />
+              </div>
+              <input type="submit" class="btn btn-primary" value="{% trans 'Enviar' %}" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
